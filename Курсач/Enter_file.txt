@@ -1,0 +1,5 @@
+admin admin 1
+ilya 12345 0
+vasya 12345 0
+elijah 12345 1
+dima 54321 1
