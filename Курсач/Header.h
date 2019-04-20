@@ -1,4 +1,4 @@
-#ifndef __HEADER_H__
+п»ї#ifndef __HEADER_H__
 #define __HEADER_H__
 #pragma once
 #define NOMINMAX
@@ -16,26 +16,26 @@
 
 using namespace std;
 
-struct Account		//Структура данных аккаунта;
+struct Account		//РЎС‚СЂСѓРєС‚СѓСЂР° РґР°РЅРЅС‹С… Р°РєРєР°СѓРЅС‚Р°;
 {
-	string login;	//логин пользователя;
-	string pass;	// пароль пользователя;
-	int role;	// роль пользователя (1 – администратор, 0 – пользователь);
+	string login;	//Р»РѕРіРёРЅ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ;
+	string pass;	// РїР°СЂРѕР»СЊ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ;
+	int role;	// СЂРѕР»СЊ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ (1 вЂ“ Р°РґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂ, 0 вЂ“ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ);
 
 };
-struct Avia	//Структура с информацией о рейсе
+struct Avia	//РЎС‚СЂСѓРєС‚СѓСЂР° СЃ РёРЅС„РѕСЂРјР°С†РёРµР№ Рѕ СЂРµР№СЃРµ
 {
-	int numberPlane;		//Номер рейса
-	string Type;		//Тип самолета
-	string destination;	//Пункт назначения
-	int dateFlight[3];	//Дата вылета
-	string timeFlight;	//Время вылета
-	string timeArrival;	//Время прибытия
-	int CapacityPlane;	//Вместимость самолета
-	int leftTicketsBusiness;	//Кол-во оставшихся билетов бизнес-класса
-	double priceTicketsBusiness;	//Цена билета бизнес-класса
-	int leftTicketsEconom;	//Кол-во оставшихся билетов эконом-класса
-	double priceTicketsEconom;	//цена билета эконом-класса
+	int numberPlane;		//РќРѕРјРµСЂ СЂРµР№СЃР°
+	string Type;		//РўРёРї СЃР°РјРѕР»РµС‚Р°
+	string destination;	//РџСѓРЅРєС‚ РЅР°Р·РЅР°С‡РµРЅРёСЏ
+	int dateFlight[3];	//Р”Р°С‚Р° РІС‹Р»РµС‚Р°
+	string timeFlight;	//Р’СЂРµРјСЏ РІС‹Р»РµС‚Р°
+	string timeArrival;	//Р’СЂРµРјСЏ РїСЂРёР±С‹С‚РёСЏ
+	int CapacityPlane;	//Р’РјРµСЃС‚РёРјРѕСЃС‚СЊ СЃР°РјРѕР»РµС‚Р°
+	int leftTicketsBusiness;	//РљРѕР»-РІРѕ РѕСЃС‚Р°РІС€РёС…СЃСЏ Р±РёР»РµС‚РѕРІ Р±РёР·РЅРµСЃ-РєР»Р°СЃСЃР°
+	double priceTicketsBusiness;	//Р¦РµРЅР° Р±РёР»РµС‚Р° Р±РёР·РЅРµСЃ-РєР»Р°СЃСЃР°
+	int leftTicketsEconom;	//РљРѕР»-РІРѕ РѕСЃС‚Р°РІС€РёС…СЃСЏ Р±РёР»РµС‚РѕРІ СЌРєРѕРЅРѕРј-РєР»Р°СЃСЃР°
+	double priceTicketsEconom;	//С†РµРЅР° Р±РёР»РµС‚Р° СЌРєРѕРЅРѕРј-РєР»Р°СЃСЃР°
 };
 
 

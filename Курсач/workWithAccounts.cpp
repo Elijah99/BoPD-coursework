@@ -1,9 +1,9 @@
-#include "Header.h"
+ï»¿#include "Header.h"
 
 void showAccounts(vector<Account> &arr_of_accounts)
 {
-	cout << "Òàáëèöà ó÷¸òíûõ çàïèñåé ïîëüçîâàòåëåé " << endl
-		<< setw(8) << left << "Íîìåð" << setw(15) << "Ëîãèí" << setw(15) << "Ïàðîëü" << setw(15) << "Ïðèîðèòåò" << endl;
+	cout << "Ð¢Ð°Ð±Ð»Ð¸Ñ†Ð° ÑƒÑ‡Ñ‘Ñ‚Ð½Ñ‹Ñ… Ð·Ð°Ð¿Ð¸ÑÐµÐ¹ Ð¿Ð¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÐµÐ»ÐµÐ¹ " << endl
+		<< setw(8) << left << "ÐÐ¾Ð¼ÐµÑ€" << setw(15) << "Ð›Ð¾Ð³Ð¸Ð½" << setw(15) << "ÐŸÐ°Ñ€Ð¾Ð»ÑŒ" << setw(15) << "ÐŸÑ€Ð¸Ð¾Ñ€Ð¸Ñ‚ÐµÑ‚" << endl;
 	for (unsigned int i = 0; i < arr_of_accounts.size(); i++)
 		cout << setw(8) << left << i + 1 <<
 		setw(15) << left << arr_of_accounts[i].login <<
@@ -14,49 +14,49 @@ void addAccount(vector<Account> &arr_of_accounts)
 {
 
 	Account buffer[1];
-	cout << "×òîáû äîáàâèòü àêêàóíò ââåäèòå" << endl;
-	cout << "ëîãèí :";
+	cout << "Ð§Ñ‚Ð¾Ð±Ñ‹ Ð´Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑŒ Ð°ÐºÐºÐ°ÑƒÐ½Ñ‚ Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ" << endl;
+	cout << "Ð»Ð¾Ð³Ð¸Ð½ :";
 	while (isLoginUnique(buffer[0].login)) break;
-		cout << "  " << "ïàðîëü : ";
+		cout << "  " << "Ð¿Ð°Ñ€Ð¾Ð»ÑŒ : ";
 	buffer[0].pass = inputPassword();
-	cout << "  " << "ïðèîðèòåò : ";
+	cout << "  " << "Ð¿Ñ€Ð¸Ð¾Ñ€Ð¸Ñ‚ÐµÑ‚ : ";
 	buffer[0].role = inputIntRange(0, 1);
 	arr_of_accounts.insert(arr_of_accounts.end(), buffer[0]);
 
 }
 void delAccount(vector<Account> &arr_of_accounts)
 {
-	cout << "Ââåäèòå íîìåð óäàëÿåìîé çàïèñè ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð¾Ð¼ÐµÑ€ ÑƒÐ´Ð°Ð»ÑÐµÐ¼Ð¾Ð¹ Ð·Ð°Ð¿Ð¸ÑÐ¸ ";
 	int del_item = inputIntRange(1, arr_of_accounts.size());
 	if (arr_of_accounts[del_item - 1].login == "admin") {
-		cout << "Âû íå ìîæåòå óäàëèòü ó÷åòíóþ çàïèñü àäìèíà\n" << "×òîáû ïðîäîëæèòü íàæìèòå ëþáóþ êëàâèøó"; system("pause");
+		cout << "Ð’Ñ‹ Ð½Ðµ Ð¼Ð¾Ð¶ÐµÑ‚Ðµ ÑƒÐ´Ð°Ð»Ð¸Ñ‚ÑŒ ÑƒÑ‡ÐµÑ‚Ð½ÑƒÑŽ Ð·Ð°Ð¿Ð¸ÑÑŒ Ð°Ð´Ð¼Ð¸Ð½Ð°\n" << "Ð§Ñ‚Ð¾Ð±Ñ‹ Ð¿Ñ€Ð¾Ð´Ð¾Ð»Ð¶Ð¸Ñ‚ÑŒ Ð½Ð°Ð¶Ð¼Ð¸Ñ‚Ðµ Ð»ÑŽÐ±ÑƒÑŽ ÐºÐ»Ð°Ð²Ð¸ÑˆÑƒ"; system("pause");
 		manageAccounts();
 	}
 	arr_of_accounts.erase(arr_of_accounts.begin() + del_item - 1);
 	system("cls");
-	cout << "çàïèñü óäàëåíà !" << endl;
+	cout << "Ð·Ð°Ð¿Ð¸ÑÑŒ ÑƒÐ´Ð°Ð»ÐµÐ½Ð° !" << endl;
 	cout << endl;
 
 }
 void updateAccount(vector<Account> &arr_of_accounts)
 {
-	cout << "Ââåäèòå íîìåð ðåäàêòèðóåìîé çàïèñè ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð¾Ð¼ÐµÑ€ Ñ€ÐµÐ´Ð°ÐºÑ‚Ð¸Ñ€ÑƒÐµÐ¼Ð¾Ð¹ Ð·Ð°Ð¿Ð¸ÑÐ¸ ";
 	int upd_item;
 	upd_item = inputIntRange(1, arr_of_accounts.size());
 	if (arr_of_accounts[upd_item - 1].login == "admin") {
-		cout << "Âû íå ìîæåòå èçìåíèòü ó÷åòíóþ çàïèñü àäìèíà\n" << "×òîáû ïðîäîëæèòü íàæìèòå ëþáóþ êëàâèøó"; system("pause");
+		cout << "Ð’Ñ‹ Ð½Ðµ Ð¼Ð¾Ð¶ÐµÑ‚Ðµ Ð¸Ð·Ð¼ÐµÐ½Ð¸Ñ‚ÑŒ ÑƒÑ‡ÐµÑ‚Ð½ÑƒÑŽ Ð·Ð°Ð¿Ð¸ÑÑŒ Ð°Ð´Ð¼Ð¸Ð½Ð°\n" << "Ð§Ñ‚Ð¾Ð±Ñ‹ Ð¿Ñ€Ð¾Ð´Ð¾Ð»Ð¶Ð¸Ñ‚ÑŒ Ð½Ð°Ð¶Ð¼Ð¸Ñ‚Ðµ Ð»ÑŽÐ±ÑƒÑŽ ÐºÐ»Ð°Ð²Ð¸ÑˆÑƒ"; system("pause");
 		manageAccounts();
 	}
 	arr_of_accounts[upd_item - 1].login = "0";
-	cout << "îòðåäàêòèðóéòå äàííûå ó÷¸òíîé çàïèñè: " << endl;
-	cout << "ëîãèí:  !";
+	cout << "Ð¾Ñ‚Ñ€ÐµÐ´Ð°ÐºÑ‚Ð¸Ñ€ÑƒÐ¹Ñ‚Ðµ Ð´Ð°Ð½Ð½Ñ‹Ðµ ÑƒÑ‡Ñ‘Ñ‚Ð½Ð¾Ð¹ Ð·Ð°Ð¿Ð¸ÑÐ¸: " << endl;
+	cout << "Ð»Ð¾Ð³Ð¸Ð½:  !";
 	while (isLoginUnique(arr_of_accounts[upd_item - 1].login))break;
-	cout << "Ïàðîëü:  !";
+	cout << "ÐŸÐ°Ñ€Ð¾Ð»ÑŒ:  !";
 	arr_of_accounts[upd_item - 1].pass = inputPassword();
-	cout << "ðîëü:  !";
+	cout << "Ñ€Ð¾Ð»ÑŒ:  !";
 	arr_of_accounts[upd_item - 1].role = inputIntRange(0, 1);
 	system("cls");
-	cout << "çàïèñü îòðåäàêòèðîâàíà !" << endl;
+	cout << "Ð·Ð°Ð¿Ð¸ÑÑŒ Ð¾Ñ‚Ñ€ÐµÐ´Ð°ÐºÑ‚Ð¸Ñ€Ð¾Ð²Ð°Ð½Ð° !" << endl;
 	cout << endl;
 
 }

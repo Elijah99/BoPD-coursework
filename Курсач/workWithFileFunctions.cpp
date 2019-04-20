@@ -1,4 +1,4 @@
-#include "Header.h"
+ï»¿#include "Header.h"
 #include "globals.h"
 void readFileAccounts(vector<Account> &arr_of_accounts)
 {
@@ -57,7 +57,7 @@ void readFileTickets(vector<Avia> &arr_of_planes)
 		fin.close();
 	}
 	else {
-		cout << "Ôàéë ïóñò" << endl;
+		cout << "Ð¤Ð°Ð¹Ð» Ð¿ÑƒÑÑ‚" << endl;
 
 	}
 }
@@ -97,7 +97,7 @@ bool isLoginUnique(string &login) {
 			}
 		}
 		if (!flag) {
-			cout << "Ýòîò ëîãèí óæå çàíÿò, ïîïðîáóéòå åù¸:" << endl;
+			cout << "Ð­Ñ‚Ð¾Ñ‚ Ð»Ð¾Ð³Ð¸Ð½ ÑƒÐ¶Ðµ Ð·Ð°Ð½ÑÑ‚, Ð¿Ð¾Ð¿Ñ€Ð¾Ð±ÑƒÐ¹Ñ‚Ðµ ÐµÑ‰Ñ‘:" << endl;
 		}
 		else {
 			return flag;

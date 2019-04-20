@@ -1,9 +1,9 @@
-#include "Header.h"
+ï»¿#include "Header.h"
 void authorization()
 {
 	system("cls");
-	cout << setw(40) << "Äîáðî ïîæàëîâàòü!" << endl;
-	cout << setw(36) << "Àâòîðèçàöèÿ" << endl;
+	cout << setw(40) << "Ð”Ð¾Ð±Ñ€Ð¾ Ð¿Ð¾Ð¶Ð°Ð»Ð¾Ð²Ð°Ñ‚ÑŒ!" << endl;
+	cout << setw(36) << "ÐÐ²Ñ‚Ð¾Ñ€Ð¸Ð·Ð°Ñ†Ð¸Ñ" << endl;
 	Account Check;
 	int role;
 	checkFiles();
@@ -16,8 +16,8 @@ void authorization()
 	}
 	else
 	{
-		cout << " Ïðîâàë " << endl
-			<< " Ïîïðîáóéòå åù¸" << endl;
+		cout << " ÐŸÑ€Ð¾Ð²Ð°Ð» " << endl
+			<< " ÐŸÐ¾Ð¿Ñ€Ð¾Ð±ÑƒÐ¹Ñ‚Ðµ ÐµÑ‰Ñ‘" << endl;
 		authorization();
 	}
 }
@@ -89,7 +89,7 @@ void editMode(vector<Avia> &arr_of_planes)
 		switch (editModeMenu())
 		{
 		case 0: exit(1); break;
-		case 1: system("cls"); cout << setw(40) << "Ñïèñîê áèëåòîâ " << endl; showTickets(arr_of_planes);  break;
+		case 1: system("cls"); cout << setw(40) << "Ð¡Ð¿Ð¸ÑÐ¾Ðº Ð±Ð¸Ð»ÐµÑ‚Ð¾Ð² " << endl; showTickets(arr_of_planes);  break;
 		case 2: addOnePlane(arr_of_planes); writeFileTickets(arr_of_planes);  break;
 		case 3: delOnePlane(arr_of_planes); writeFileTickets(arr_of_planes); break;
 		case 4: updatePlanesList(arr_of_planes); writeFileTickets(arr_of_planes); break;
@@ -142,7 +142,7 @@ void sortingMode(const string a, vector<Avia> &arr_of_planes) {
 int choosePlane(vector<Avia> &arr_of_planes)
 {
 	int number_of_plane;
-	cout << setw(40) << "Ñïèñîê áèëåòîâ " << endl;
+	cout << setw(40) << "Ð¡Ð¿Ð¸ÑÐ¾Ðº Ð±Ð¸Ð»ÐµÑ‚Ð¾Ð² " << endl;
 	showTickets(arr_of_planes);
 	switch (choosePlaneMenu())
 	{
@@ -150,7 +150,7 @@ int choosePlane(vector<Avia> &arr_of_planes)
 	{
 		number_of_plane = searchByNumberPlane(arr_of_planes);
 		while (number_of_plane == NULL) {
-			cout << "Òàêîãî ðåéñà íå ñóùåñòâóåò, ïîæàëóéñòà ïîâòîðèòå ââîä\n";
+			cout << "Ð¢Ð°ÐºÐ¾Ð³Ð¾ Ñ€ÐµÐ¹ÑÐ° Ð½Ðµ ÑÑƒÑ‰ÐµÑÑ‚Ð²ÑƒÐµÑ‚, Ð¿Ð¾Ð¶Ð°Ð»ÑƒÐ¹ÑÑ‚Ð° Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´\n";
 			number_of_plane = searchByNumberPlane(arr_of_planes);
 		}
 	} break;
@@ -158,7 +158,7 @@ int choosePlane(vector<Avia> &arr_of_planes)
 	{
 		number_of_plane = searchByDestination(arr_of_planes, "Buy");
 		while (number_of_plane == NULL) {
-			cout << "Òàêîãî ðåéñà íå ñóùåñòâóåò, ïîæàëóéñòà ïîâòîðèòå ââîä\n";
+			cout << "Ð¢Ð°ÐºÐ¾Ð³Ð¾ Ñ€ÐµÐ¹ÑÐ° Ð½Ðµ ÑÑƒÑ‰ÐµÑÑ‚Ð²ÑƒÐµÑ‚, Ð¿Ð¾Ð¶Ð°Ð»ÑƒÐ¹ÑÑ‚Ð° Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´\n";
 			number_of_plane = searchByDestination(arr_of_planes, "Buy");
 		}
 	}break;
@@ -166,7 +166,7 @@ int choosePlane(vector<Avia> &arr_of_planes)
 	{
 		number_of_plane = searchByDateFlight(arr_of_planes, "Buy");
 		while (number_of_plane == NULL) {
-			cout << "Òàêîãî ðåéñà íå ñóùåñòâóåò, ïîæàëóéñòà ïîâòîðèòå ââîä\n";
+			cout << "Ð¢Ð°ÐºÐ¾Ð³Ð¾ Ñ€ÐµÐ¹ÑÐ° Ð½Ðµ ÑÑƒÑ‰ÐµÑÑ‚Ð²ÑƒÐµÑ‚, Ð¿Ð¾Ð¶Ð°Ð»ÑƒÐ¹ÑÑ‚Ð° Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´\n";
 			number_of_plane = searchByDateFlight(arr_of_planes, "Buy");
 		}
 	}break;

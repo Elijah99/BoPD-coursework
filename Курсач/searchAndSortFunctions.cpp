@@ -1,8 +1,8 @@
-#include "Header.h"
+ï»¿#include "Header.h"
 int searchByNumberPlane(vector<Avia> arr_of_planes)
 {
 	int number_of_plane;
-	cout << "Ââåäèòå íîìåð ðåéñà - ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð¾Ð¼ÐµÑ€ Ñ€ÐµÐ¹ÑÐ° - ";
 	number_of_plane = inputInt();
 	for (unsigned int i = 0; i < arr_of_planes.size(); i++)
 	{
@@ -13,7 +13,7 @@ int searchByNumberPlane(vector<Avia> arr_of_planes)
 			buffer = arr_of_planes[i];
 			foundPlane.push_back(buffer);
 			system("cls");
-			cout << "Ðåéñ ñ çàäàííûì íîìåðîì :\n";
+			cout << "Ð ÐµÐ¹Ñ Ñ Ð·Ð°Ð´Ð°Ð½Ð½Ñ‹Ð¼ Ð½Ð¾Ð¼ÐµÑ€Ð¾Ð¼ :\n";
 			showTickets(foundPlane);
 			return number_of_plane;
 		}
@@ -24,7 +24,7 @@ int searchByDestination(vector<Avia> arr_of_planes, const string checkMode)
 {
 	string check_destination;
 	vector<Avia> foundPlanes;
-	cout << "Ââåäèòå ïóíêò íàçíà÷åíèÿ - ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¿ÑƒÐ½ÐºÑ‚ Ð½Ð°Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ñ - ";
 	cin >> check_destination;
 	for (unsigned int i = 0; i < arr_of_planes.size(); i++)
 	{
@@ -32,7 +32,7 @@ int searchByDestination(vector<Avia> arr_of_planes, const string checkMode)
 	}
 	if (foundPlanes.size() > 0) {
 		system("cls");
-		cout << "Ñïèñîê ñàìîëåòîâ ñ çàäàííûì ïóíêòîì íàçíà÷åíèÿ:\n";
+		cout << "Ð¡Ð¿Ð¸ÑÐ¾Ðº ÑÐ°Ð¼Ð¾Ð»ÐµÑ‚Ð¾Ð² Ñ Ð·Ð°Ð´Ð°Ð½Ð½Ñ‹Ð¼ Ð¿ÑƒÐ½ÐºÑ‚Ð¾Ð¼ Ð½Ð°Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ñ:\n";
 		showTickets(foundPlanes);
 		if (checkMode == "Buy") {
 			if (foundPlanes.size() == 1) return foundPlanes[0].numberPlane;
@@ -44,7 +44,7 @@ int searchByDestination(vector<Avia> arr_of_planes, const string checkMode)
 		else return NULL;
 	}
 	else {
-		cout << "Ñàìîëåòîâ ñ çàäàííûì ïóíêòîì íàçíà÷åíèÿ íå íàéäåíî\n";
+		cout << "Ð¡Ð°Ð¼Ð¾Ð»ÐµÑ‚Ð¾Ð² Ñ Ð·Ð°Ð´Ð°Ð½Ð½Ñ‹Ð¼ Ð¿ÑƒÐ½ÐºÑ‚Ð¾Ð¼ Ð½Ð°Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ñ Ð½Ðµ Ð½Ð°Ð¹Ð´ÐµÐ½Ð¾\n";
 		return NULL;
 	}
 }
@@ -64,7 +64,7 @@ int searchByDateFlight(vector<Avia> arr_of_planes, const string checkMode)
 
 	if (foundPlanes.size() > 0) {
 		system("cls");
-		cout << "Ñïèñîê ñàìîëåòîâ ñ çàäàííîé äàòîé âûëåòà:\n";
+		cout << "Ð¡Ð¿Ð¸ÑÐ¾Ðº ÑÐ°Ð¼Ð¾Ð»ÐµÑ‚Ð¾Ð² Ñ Ð·Ð°Ð´Ð°Ð½Ð½Ð¾Ð¹ Ð´Ð°Ñ‚Ð¾Ð¹ Ð²Ñ‹Ð»ÐµÑ‚Ð°:\n";
 		showTickets(foundPlanes);
 		if (checkMode == "Buy") {
 			if (foundPlanes.size() == 1) return foundPlanes[0].numberPlane;
@@ -76,7 +76,7 @@ int searchByDateFlight(vector<Avia> arr_of_planes, const string checkMode)
 		else return NULL;
 	}
 	else {
-		cout << "Ñàìîëåòîâ ñ çàäàííîé äàòîé âûëåòà íå íàéäåíî\n";
+		cout << "Ð¡Ð°Ð¼Ð¾Ð»ÐµÑ‚Ð¾Ð² Ñ Ð·Ð°Ð´Ð°Ð½Ð½Ð¾Ð¹ Ð´Ð°Ñ‚Ð¾Ð¹ Ð²Ñ‹Ð»ÐµÑ‚Ð° Ð½Ðµ Ð½Ð°Ð¹Ð´ÐµÐ½Ð¾\n";
 		return NULL;
 	}
 }

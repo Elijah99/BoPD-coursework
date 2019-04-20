@@ -1,10 +1,10 @@
-#include"Header.h"
+ï»¿#include"Header.h"
 Account inputAccount()
 {
 	Account *Check = new Account;
-	cout << "Ââåäèòå âàø ëîãèí - " << endl;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð²Ð°Ñˆ Ð»Ð¾Ð³Ð¸Ð½ - " << endl;
 	Check->login = inputString();
-	cout << "Ââåäèòå âàø ïàðîëü - " << endl;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð²Ð°Ñˆ Ð¿Ð°Ñ€Ð¾Ð»ÑŒ - " << endl;
 	Check->pass = inputPassword();
 	return *Check;
 }
@@ -18,14 +18,14 @@ double inputDouble() {
 		{
 			cin.clear();
 			cin.ignore(numeric_limits<streamsize>::max(), '\n');
-			cout << "Íåâåðíûé ââîä, ïîïðîáóéòå åùå ðàç - " << endl;
+			cout << "ÐÐµÐ²ÐµÑ€Ð½Ñ‹Ð¹ Ð²Ð²Ð¾Ð´, Ð¿Ð¾Ð¿Ñ€Ð¾Ð±ÑƒÐ¹Ñ‚Ðµ ÐµÑ‰Ðµ Ñ€Ð°Ð· - " << endl;
 		}
 	}
 	return a;
 }
 void inputData(int *data)
 {
-	cout << "(ôîðìàòà ÄÄ.ÌÌ.ÃÃÃÃ)";
+	cout << "(Ñ„Ð¾Ñ€Ð¼Ð°Ñ‚Ð° Ð”Ð”.ÐœÐœ.Ð“Ð“Ð“Ð“)";
 	data[0] = inputInt();
 	cin.ignore();
 	data[1] = inputInt();
@@ -41,7 +41,7 @@ void inputData(int *data)
 		(data[2] == sYear && data[1] < sMonth) ||
 		(data[2] == sYear && data[1] == sMonth && data[0] < sDay))
 	{
-		cout << "Äàòà ââåäåíà íåâåðíî\n";
+		cout << "Ð”Ð°Ñ‚Ð° Ð²Ð²ÐµÐ´ÐµÐ½Ð° Ð½ÐµÐ²ÐµÑ€Ð½Ð¾\n";
 		inputData(data);
 	}
 
@@ -57,7 +57,7 @@ int inputInt()
 		{
 			cin.clear();
 			cin.ignore(numeric_limits<streamsize>::max(), '\n');
-			cout << "Íåâåðíûé ââîä, ïîïðîáóéòå åùå ðàç - " << endl;
+			cout << "ÐÐµÐ²ÐµÑ€Ð½Ñ‹Ð¹ Ð²Ð²Ð¾Ð´, Ð¿Ð¾Ð¿Ñ€Ð¾Ð±ÑƒÐ¹Ñ‚Ðµ ÐµÑ‰Ðµ Ñ€Ð°Ð· - " << endl;
 		}
 	}
 	return a;
@@ -67,7 +67,7 @@ int inputIntRange(int left, int right)
 	int a = inputInt();
 	while (a < left || a > right)
 	{
-		cout << "Íåâåðíûé ââîä, ïîïðîáóéòå åùå ðàç - " << endl;
+		cout << "ÐÐµÐ²ÐµÑ€Ð½Ñ‹Ð¹ Ð²Ð²Ð¾Ð´, Ð¿Ð¾Ð¿Ñ€Ð¾Ð±ÑƒÐ¹Ñ‚Ðµ ÐµÑ‰Ðµ Ñ€Ð°Ð· - " << endl;
 		a = inputInt();
 	}
 
@@ -85,7 +85,7 @@ string inputString()
 		{
 			fflush(stdin);
 			cin.clear();
-			cout << "ïîïðîáóéòå åùå ðàç - " << endl;
+			cout << "Ð¿Ð¾Ð¿Ñ€Ð¾Ð±ÑƒÐ¹Ñ‚Ðµ ÐµÑ‰Ðµ Ñ€Ð°Ð· - " << endl;
 		}
 	}
 	return str;
@@ -96,8 +96,8 @@ string inputPassword()
 	cin >> pass;
 	if (pass.length() < 5)
 	{
-		cout << "Ïàðîëü äîëæåí ñîäåðæàòü áîëåå 5 ñèìâîëîâ" << endl
-			<< "Ïîïðîáóéòå åù¸ ðàç" << endl;
+		cout << "ÐŸÐ°Ñ€Ð¾Ð»ÑŒ Ð´Ð¾Ð»Ð¶ÐµÐ½ ÑÐ¾Ð´ÐµÑ€Ð¶Ð°Ñ‚ÑŒ Ð±Ð¾Ð»ÐµÐµ 5 ÑÐ¸Ð¼Ð²Ð¾Ð»Ð¾Ð²" << endl
+			<< "ÐŸÐ¾Ð¿Ñ€Ð¾Ð±ÑƒÐ¹Ñ‚Ðµ ÐµÑ‰Ñ‘ Ñ€Ð°Ð·" << endl;
 		pass = inputPassword();
 	}
 	return pass;
@@ -108,7 +108,7 @@ string inputTime()
 	const char *dPoint = ":";
 	while (true)
 	{
-		cout << "ôîðìàòà(ÌÌ:××) - ";
+		cout << "Ñ„Ð¾Ñ€Ð¼Ð°Ñ‚Ð°(ÐœÐœ:Ð§Ð§) - ";
 		data = inputString();
 		if (data < "24:00" && data >= "00:00" && data.size() == 5 && data.substr(2, 1) == dPoint) return data;
 	}
